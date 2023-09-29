@@ -1,0 +1,255 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- Include the CesiumJS JavaScript and CSS files -->
+    <script src="https://cesium.com/downloads/cesiumjs/releases/1.108/Build/Cesium/Cesium.js"></script>
+    <link href="https://cesium.com/downloads/cesiumjs/releases/1.108/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+    <style>
+        /* Set the map container's dimensions */
+        #cesiumContainer {
+            width: 100%;
+            height: 100%;
+        }
+
+        .loader-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            align-items: center;
+            justify-content: center;
+        }
+
+        .loader {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #3498db;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    <script>
+    // Function to show the loader
+        function showLoader() {
+            var loader = document.getElementById("loader");
+            loader.style.display = "flex"; // Show the loader
+        }
+        // Function to hide the loader
+        function hideLoader() {
+            var loader = document.getElementById("loader");
+            loader.style.display = "none"; // Hide the loader
+        }
+        function GetPinString(selectId) {
+            var retString = "";
+            switch (selectId) {
+                case 1: retString = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAE4ElEQVRYhb2WXYhUZRjH/+85Z+bMx7q72uyu447fsqmr3ohhSxaRSXphREHQTZF1ESQI3kRdFFGCQiukm1/YFkZSgiEphaVolmmEWGqtra6zs1/j7O7MmY9z5pz3s4thoYI9juvYA+fq8P7/v+fjnOclSilMFoSQSd8BwLrOvrWBvDpQZwTnGIauUZfyolVMlnL5fTpzPzh7eK0CAF+PqQKs3HtryVPR6NX+Yak11mkwdIKiI+FSCe5RjA0MZzLJ1KNXvn/+up+H4ZuiT0SJvpW6RGtrDaA1ZiBgEIwXBPpGGLIqiOktsWZm278tWPFhG4BUzQHySrK2RBBBg2Dx7ACiIQ3JNEOZKuRKEnowgGhDvRkMh04AWD6ZjnYPAEcdu4i6MEGsXsecZgPTIhpCgUrbCNFAdA1mKNzupzNlAOXRws6jf4I6ZQyMclxLUmQsgWJZVt5LCckFOPV8J3nKADM53+HNjWLLzos49WMKN4c9/DXEkMpwSCHBPA+ebSObTl7205nSV9Cxu/dJVbJP9owVUXBcmGMupo9zLJ0/A2bYBPUo8rfT6P/j2jl7vP/Zwnj36GQeUxpCwuh7jHE4jEEpBbdRRzrMMZoegNZvA64FA9mXSr3bP62c6J5U665bsGbPjWcU4w9ZLgPnAlAKREgQziGLHIx7kMqxJLMPVaN3VwDz9vYRRfk2zgSyLoWSCpASEBygDCpPAe5BV/S0k9wtq9G8Ywuee6uXWCZ5P+KpF0Vea7F0pnuUI+8xAApESoBzoMQAyqBxF4S4H1eblC/AvL19wfn10eRwSsaJSTAUKUKUOLIuhZQSkAoQAoRzKIsB3ANB2YZnf1stgG8LVoXMw6qkxaMhDYmYAcEZBK+UHwr/Kj+KlfJrkp51hvaLmgA0msb6sqfQGjMwr8XAnLogCi6DyyaGr5I98gzgDISX0RCpz1ZrfkcAR8pwoslAU4OORJOBTavjCOpGZb1OZM8YVL5Sfk1RJGa3vZBYuC1RE4DryfHBJbMDmBbWMGOajsWzTHy9eQU2LJwFvSABhwM2A2wPhLtoTSyCGY5qRCP7qgXwHcL0zbHPRpY0vtHU1AClAKkUwoaOdzYuwtPLZ+HELyPouzUOTPfwQF0dwnoAucERaERbXZMKqFx5+/a9l4Z06aHoSPRnOG6lGUbzAhA62hMtWPFgG5a1L8WMWAxSCEjOISit+g/rCzD01XrLc+iGLW+fyydTWWSLAjdHKgsnbQmMFyWgFCQXEJSBexTMdeE6uWvVAlS1jOIdRxYD+HL1yvjyx9fMByUR9A4z2G5l5bJyGU6+gEJ6FP2//ypzt3tWFa1DlyZ0anInjHccCXS0a8d7UmId0U0sWBCDGQrCpQK0ZCMzOIyhGz1jbiHzSmHswLF/6tTsUvrD6Z9vX75yVd9x2NzIKHtECa9NMtdQzMlKal+UtHQ8P7LL/q9OTS6lBw9+/rCUornsursGL7x6HsD5as/6RdXbMBGPv5tMDbiRSOTNWhjfFUBXV3ckZJqPpTOjJzdv3lT63wFmNje9ns3l9GAwuLWW5gAqAzLZMxFnTv2U7Ozcc+F+eNxxCD/p/mJZuezOFUK+NlWAKdMBwHffnDm2f9+hvvvl4TsDXV3dAQU8YeWtj+4FwC98ARLxmS/nLItGo3Wd9wvgb4ca/mTXWBxlAAAAAElFTkSuQmCC"; break;//Blue Pin
+                case 2: retString = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAEqUlEQVRYhb2WW2wUZRTH/983OzN7oa20dN1CKQQEFrC+ECoqgQfAIDEQI/HBF1R8MZEnjDE+GjSRRB401aCBajAafTCSAF6IBDAiEmwgpd6h5doWdtu9zX2+c3zYYohJh2VdPMk8bHbn//99Z/5n5whmxlQlhJjyOwBw18xcSzHnA5haFwQkM4ekaDjwebc9Id7qPD3BABDpUS9AuKJtcfjI8nN8/rQUrRkgpoOLecC1oULAdcLrlQKtmttf+j3KIxZ5xKiKG9vhFqTM9kB0LQKMBHDjCujPfsj8KAxDSxuGODs4b9pCAJcaDiArdiCzPYCZgFz6MMS0e0Dnz0LYZYjxUUhNIKYLU0pxEED3lDr1AoiK/QXrcYimVoj0bIi5SyGa24BEavIHgBCAJuTSyIPUC+Cl4iXnYB9Y18HDg6Czx8FjF4FiHkA1eEyAUhyZ5PoBsnN2WiqJQt8OhOeOg4YGQL+eBF38BUwABUDgMwpl/0yUTl0Z8DYvXFdOmqv8fBmlIAnr0JdI6QrmjHYQNIScgGW7uDFS/r5QDp5sOICfMHcoIRH4IVgK2KGBskPg0RzCvAM/ULCUeGbtmP8RAEw9hHUABJsXPFEx9B7fckGiqs7MIMUISgpeBXBIFpRS+2rRu6MMcFYXgWm+EWgagpIFEuIfc1IEZYVQRHBJHllf8qkWzdt2oLS+TehB+DoltC2eNO/1TV0LScG3PEAKMAFMDLIVVEDVz8x7az1UJABndcNf/OAwXTjVIQXAZjNCTcIv2iApJket2gFVCaCIEQBWLPS/bgiA6l7yKXv5DqSaIWbMgl8sIZxsP4DquBGDAgLZCkQMh8SxjXaoagWIzkBLy2NsFyFnL4Kc9wDQPguB4yEMFJirrWdFUJUQoWIoRWhNYbxW89sCCMdNyK4lEJk5EF1ZJDZsAbw4WAjglvZTJQQRgQFkWvWn+zOpzoYAqLGLV2T3SqCpFWLGTGiLlqFj5z5Mn98DVBTIVSBHQXkEpRjt02OIxTQJgd21AkRnICh+rNnFV0SyefKBK0jDRPuzWzF9WRalY0fgDF2AMnTE4zp0TcIqMASJFQ3pABniTW//21fR0gou5kBD50B/nQGPXYL0KmhJJ5BOEzKzYkg1adURVIxQcc1/cJEAqcNOgUNvg7P35SKX80DuGviPn8HDg+CRIXDuahW02hyosHo5XjhYK0BNK1lpUzIL4HN537Lu2IIeiNwI+LdT4EoBTEAYMHyb4ZQZYyMujebc5Y8H3H9TpyE7YWlTUr88f82BtpGBR03fgWxKT46ghcBllPMWxq8Vc6Wien5dmfbfqtOwpfT4kR/HzgwMaE9989JGdv2VgYeFnscxz6Fxx+Kf7AofWJ1T1r91GrKU7tnzyUNEKu243juZQ6UTAE7Uem9U1fw27OzoeG340mU3mUy+2gjjOwLo7e1Lxk1z9ej1G99u27a18r8DZNLtL45PTGiGYWxvpDmAye11iutmHf3uh+Fdu947eTc8bhvCD/s+u99x3DlK0Qv1AtRNBwCHvzq6//3d+y7cLY/IDPT29ukMrCkUC+/+F4CoigTo7Mg8N1Eo+KnUtF13C+Bva6bjoHvEsg8AAAAASUVORK5CYII="; break;//Pink Pin
+                case 3: retString = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAEEElEQVRYhcWWTWxUZRSGn+/n3rnzU6clpYWmQBEMLDAKC4NNDGhFFwYM0CgSQwwxuCMm7twaXelKN27UaEIk0aCJYqIm2DRxrIAKpa1pS7WFlLa0lrbTmc79Oy6ICyNx7tQhnuXNzfs+573n+85VIsL/WTbJS0qpfzz7tTm7trK48nbTptbDBse6OY/ytdJ12+h+kF2fezPfe2kBoFqDKkkCdwL4xaVPYR5y8FBoXJPBZh1sY4rc+tw14Kl876X+uwKw8MgDDWN9lxY1BgcPlzQKgyBUJCRMKbTSE8DmHYsz8b9p66rud6hKcVnctIdNuSgUwu0mIgE/VhSLPkEcbgSaqmmtCqDl59Fi857O4XT3EQLHI0BT+VuSColKKEL3rgAAuMMDh9TYSFi0KUb8iFuxcDUosRCHKCek8cRLWCmW7hqA3tI603Ks2zQ1WwRhLvIJgZKEgEZOn/pwezFYqKaT6BjeEaDr6Tdi31el5VlyXgWrDU1pRdnVlfyN0v1bp4sjSXRqBriQc3asYF+0G7ceXzz3DSuVkHIoKAlIWeF645rh3ZQSmdcEMNRk3PlQv78cqaPRuiZsNsNS/2X8QIhiIeOAY0BnMxdhLnFDiWfAF971jDlaimHzvj1Uhq6wNDxCEApxDI4RXANt8/7jP2addF0BrjbrNqP0C6I0scCtqVlKA5epBEIQCVaDa8AoGJ+aaxdtXqsrALBbKdCZLCml6D/bw2hvH5UgJoxud+4YWEllCGOBOH75ct7eVzcArWjTCG5jnoZ8jjVKMzg6zW/LEUURAiXMBTAwUyFrNMYooxUH6gggkwZB5mdZd+wYLR0b2GBd7sFBK4fFyGFpxaEZzVrH4DgGo6QhiXaiU2AUPxgtsSkv6cWPPyK/azcNOx9keex3yuMTSLmEsQbXc0ilDGZpHqul6iUENWzDiRb1qh+p1/1YEWLRm7bg3LsV5aWJSyWi2Wl0UCEeG8aJfVwtj3bcjL+r6zoeb1HHg1i9E8YqHcaKWEAEUKAVWCVYLTiai1bLw+3TElTTr2kXbJqR91wt22zr2s+8nIdnBc8KaSN4JiZlRFwjpx0jT7RPS5BEs+areOOMXCt8fmZAR9LZ+szebhUGHUBawZRWXGiflsla9Fa1jAaGBruHBq+feWvS7wV6V6OxaoBCobBdkG1DY/Mn/4vxX7Wa/4Hu1tb18zu3rztXD4CaExgZHT34/fn+L185eSLRkFWrmhIoFAodXsbb9VPflU/qYV4zAHC4a+9jy/v3d35dL4CaPsH4+PjBqxM3vnr+yJFyvQASJ1AoFNpu/jHbeebUF5/Wy7wmAODA0WefC7oO7jtbT4DEu6Cnp+fblZDyk1179tdiUE0/8QxMTt0YPV8YrGv8AH8Chve7APhFZhYAAAAASUVORK5CYII="; break;//Red Pin
+                default:
+            }
+            return retString;
+        }
+        function SetPolygonColor(type) {
+            var polygonLineTypeColor = null;
+            switch (type) {
+                case 1: polygonLineTypeColor = Cesium.Color.RED; break;
+                case 2: polygonLineTypeColor = Cesium.Color.BLUE; break;
+                case 3: polygonLineTypeColor = Cesium.Color.MAGENTA; break;
+                default: polygonLineTypeColor = Cesium.Color.ORANGE;
+            }
+            return polygonLineTypeColor;
+        }
+
+    </script>
+    <script src="Javascript/CesiumJsMapImplementation.js"></script>
+    <script>
+        var cesiumViewer = null; const kmlString = '';
+        Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI1M2JhYjhjNS1iZDA4LTRjOTgtYjQ1Yy0yMGEwZGVlZTQ2OTIiLCJpZCI6MTYwNzgxLCJpYXQiOjE2OTIxODUwMzR9.b3VIDOtK05Ry8eI1MmLn_BYZaAQLLUtQboCHqSUFaF8';
+        document.addEventListener("DOMContentLoaded", function () {
+            showLoader();
+            var viewer = new Cesium.Viewer('cesiumContainer');//Default 3D mode
+            // Call the C# function to retrieve the KML string asynchronously
+            var animationContainer = document.querySelector('.cesium-viewer-animationContainer');
+            if (animationContainer) {
+                animationContainer.parentNode.removeChild(animationContainer);
+            }
+            var divToRemove = document.querySelector('.cesium-viewer-timelineContainer');
+            if (divToRemove) {
+                divToRemove.parentNode.removeChild(divToRemove);
+            }
+            var divToRemove = document.querySelector('.cesium-widget-credits');
+            if (divToRemove) {
+                divToRemove.parentNode.removeChild(divToRemove);
+            }
+            //var divRemoveRightToolBar = document.querySelector('.cesium-viewer-toolbar');
+            //if (divRemoveRightToolBar) {
+            //    divRemoveRightToolBar.parentNode.removeChild(divRemoveRightToolBar);
+            //}
+            //var divfullscreenContainer = document.querySelector('.cesium-viewer-fullscreenContainer');
+            //if (divfullscreenContainer) {
+            //    divfullscreenContainer.parentNode.removeChild(divfullscreenContainer);
+            //}
+            cesiumViewer = viewer;
+            var iframe = document.getElementsByClassName('cesium-infoBox-iframe')[0];
+            iframe.setAttribute('sandbox', 'allow-same-origin allow-scripts allow-popups allow-forms');
+            setTimeout(function () {
+                var loader = document.getElementById("loader");
+                loader.style.display = "none";
+            }, 10000);
+        });
+
+        //Remove entire datascources from cesiumJs map
+        function ReceiveKMLData(kmlString, kmlDocId) {
+            RunKmlData(kmlString, kmlDocId);
+        }
+        //Hide show full screen
+        function toggleFullscreenContainer() {
+            var element = document.querySelector('.cesium-viewer-fullscreenContainer');
+            if (element.style.display === 'none') {
+                element.style.display = 'block'; // Show the element
+            } else {
+                element.style.display = 'none'; // Hide the element
+            }
+        }
+
+        //Hide show top toolbar
+        function toggleCesiumTopToolBar() {
+            var element = document.querySelector('.cesium-viewer-toolbar');
+            if (element.style.display === 'none') {
+                element.style.display = 'block'; // Show the element
+            } else {
+                element.style.display = 'none'; // Hide the element
+            }
+        }
+        //Add placemark dynamically on cesiumjs map as a point
+        function AddDynamicLocationPoint(name, longitude, latitude) {
+            const citizensBankPark = cesiumViewer.entities.add({
+                position: Cesium.Cartesian3.fromDegrees(longitude, latitude),
+                point: {
+                    pixelSize: 15,
+                    color: Cesium.Color.RED,
+                    outlineColor: Cesium.Color.WHITE,
+                    outlineWidth: 2,
+                },
+                label: {
+                    text: name,
+                    font: "bold 12pt Time New Roman",
+                    style: Cesium.LabelStyle.FILL_AND_OUTLINE,
+                    scale: 1.0,
+                    outlineWidth: 2,
+                    fillColor: Cesium.Color.BLUE, // Set the label fill color
+                    outlineColor: Cesium.Color.WHITE,
+                    horizontalOrigin: Cesium.HorizontalOrigin.CENTER,
+                    verticalOrigin: Cesium.VerticalOrigin.BOTTOM,
+                    pixelOffset: new Cesium.Cartesian2(0, -15), // Adjust the offset to your preference
+                },
+            });
+        }
+
+        //Add placemark on a cesiumjs map as a Pin
+        function AddDynamicLocationBillBoard(name, longitude, latitude, pinType) {
+            let pintTypeImage = GetPinString(pinType);
+            const citizensBankPark = cesiumViewer.entities.add({
+                position: Cesium.Cartesian3.fromDegrees(longitude, latitude),
+                //billboard location as a pin
+                billboard: {
+                    image: pintTypeImage,
+                    width: 32,
+                    height: 32,
+                },
+                label: {
+                    text: name,
+                    font: "bold 12pt Time New Roman",
+                    style: Cesium.LabelStyle.FILL_AND_OUTLINE,
+                    scale: 1.0,
+                    outlineWidth: 2,
+                    fillColor: Cesium.Color.BLUE, // Set the label fill color
+                    outlineColor: Cesium.Color.WHITE,
+                    horizontalOrigin: Cesium.HorizontalOrigin.CENTER,
+                    verticalOrigin: Cesium.VerticalOrigin.BOTTOM,
+                    pixelOffset: new Cesium.Cartesian2(0, -15), // Adjust the offset to your preference
+                },
+            });
+        }
+
+        /*Procedure for Managing Camera Control on a Map*/
+        function HandleCameraPositionInMap(longitude, latitude, height, heading, pitch, roll) {
+            cesiumViewer.camera.flyTo({
+                destination: Cesium.Cartesian3.fromDegrees(longitude, latitude, height),//Specify the longitude, latitude, and altitude of the camera.
+                orientation: {//Adjust the camera's orientation
+                    heading: Cesium.Math.toRadians(heading),
+                    pitch: Cesium.Math.toRadians(pitch),
+                    roll: roll,
+                },
+            });
+        }
+        function AddLinesBetweenTwoLocation(longitude1, latitude1, longitude2, latitude2, polygonLineType) {
+            var startLocation = Cesium.Cartesian3.fromDegrees(longitude1, latitude1);
+            var endLocation = Cesium.Cartesian3.fromDegrees(longitude2, latitude2);
+            var polygonLineTypeColor = SetPolygonColor(polygonLineType);
+            cesiumViewer.entities.add({
+                polyline: {
+                    positions: [startLocation, endLocation],
+                    outlineWidth: 3,
+                    outlineColor: Cesium.Color.BLACK,
+                    glowPower: 0.2,
+                    width: 5,
+                    outline: true,
+                    material: polygonLineTypeColor
+                },
+            });
+        }
+
+        /*Procedure to load KML file on a Map*/
+        function RunKmlData(kmlContent, kmlDocId) {
+            var options =
+            {
+                camera: cesiumViewer.scene.camera,
+                canvas: cesiumViewer.scene.canvas,
+                clampToGround: true
+            };
+            var parser = new DOMParser();
+            var kmlDoc = parser.parseFromString(kmlContent, "text/xml");
+            var dataSource = new Cesium.KmlDataSource();
+            cesiumViewer.zoomTo(cesiumViewer.dataSources.add(dataSource.load(kmlDoc, options)))
+            dataSource.id = kmlDocId;
+        }
+
+
+        //Remove All datasource from cesiumJs map
+        function RemoveAllDatasource() {
+            cesiumViewer.dataSources.removeAll(); // This clears all loaded data sources, including KML
+        }
+
+        /*Unload specific KMl file from MAP*/
+        function UnloadKML(kmlDocsourceId) {
+            var kmlDataSource = cesiumViewer.dataSources;
+            cesiumViewer.dataSources._dataSources.forEach(function (dataSource) {
+                if (dataSource.id == kmlDocsourceId) {
+                    cesiumViewer.dataSources.remove(dataSource);
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="loader-overlay" id="loader" style="z-index:99999">
+        <div class="loader"></div>
+    </div>
+    <div id="cesiumContainer" class="fullSize"></div>
+</body>
+</html>

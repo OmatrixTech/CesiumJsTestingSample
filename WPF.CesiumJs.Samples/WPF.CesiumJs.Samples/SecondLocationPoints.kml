@@ -1,0 +1,1518 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml  xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+	<Document>
+		<name>Second Location Information</name>
+		<Style id="inline0">
+			<LineStyle>
+				<width>2</width>
+			</LineStyle>
+		</Style>
+		<StyleMap id="inline3">
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#inline6</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#inline5</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id="inline4">
+			<LineStyle>
+				<width>2</width>
+			</LineStyle>
+		</Style>
+		<Style id="inline5">
+			<LineStyle>
+				<color>ffffff55</color>
+				<width>2</width>
+			</LineStyle>
+		</Style>
+		<Style id="inline6">
+			<LineStyle>
+				<color>ffffff55</color>
+				<width>2</width>
+			</LineStyle>
+		</Style>
+		<StyleMap id="inline7">
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#inline0</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#inline4</styleUrl>
+			</Pair>
+		</StyleMap>
+		<StyleMap id="m_ylw-pushpin">
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#s_ylw-pushpin</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#s_ylw-pushpin_hl</styleUrl>
+			</Pair>
+		</StyleMap>
+		<StyleMap id="m_ylw-pushpin0">
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#s_ylw-pushpin1</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#s_ylw-pushpin_hl1</styleUrl>
+			</Pair>
+		</StyleMap>
+		<StyleMap id="m_ylw-pushpin00">
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#s_ylw-pushpin0</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#s_ylw-pushpin_hl0</styleUrl>
+			</Pair>
+		</StyleMap>
+		<StyleMap id="msn_P">
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#sn_P</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#sh_P</styleUrl>
+			</Pair>
+		</StyleMap>
+		<StyleMap id="msn_S">
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#sn_S</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#sh_S</styleUrl>
+			</Pair>
+		</StyleMap>
+		<StyleMap id="msn_blu-diamond">
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#sn_blu-diamond</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#sh_blu-diamond</styleUrl>
+			</Pair>
+		</StyleMap>
+		<StyleMap id="msn_blue-pushpin">
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#sn_blue-pushpin</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#sh_blue-pushpin</styleUrl>
+			</Pair>
+		</StyleMap>
+		<StyleMap id="msn_grn-blank">
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#sn_grn-blank</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#sh_grn-blank</styleUrl>
+			</Pair>
+		</StyleMap>
+		<StyleMap id="msn_grn-pushpin">
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#sn_grn-pushpin0</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#sh_grn-pushpin</styleUrl>
+			</Pair>
+		</StyleMap>
+		<StyleMap id="msn_grn-pushpin0">
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#sn_grn-pushpin</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#sh_grn-pushpin0</styleUrl>
+			</Pair>
+		</StyleMap>
+		<StyleMap id="msn_ltblu-blank">
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#sn_ltblu-blank</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#sh_ltblu-blank</styleUrl>
+			</Pair>
+		</StyleMap>
+		<StyleMap id="msn_ltblu-pushpin">
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#sn_ltblu-pushpin</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#sh_ltblu-pushpin</styleUrl>
+			</Pair>
+		</StyleMap>
+		<StyleMap id="msn_pink-circle">
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#sn_pink-circle</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#sh_pink-circle</styleUrl>
+			</Pair>
+		</StyleMap>
+		<StyleMap id="msn_pink-pushpin0">
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#sn_pink-pushpin1</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#sh_pink-pushpin</styleUrl>
+			</Pair>
+		</StyleMap>
+		<StyleMap id="msn_pink-pushpin">
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#sn_pink-pushpin</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#sh_pink-pushpin0</styleUrl>
+			</Pair>
+		</StyleMap>
+		<StyleMap id="msn_pink-pushpin1">
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#sn_pink-pushpin0</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#sh_pink-pushpin1</styleUrl>
+			</Pair>
+		</StyleMap>
+		<StyleMap id="msn_purple-diamond">
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#sn_purple-diamond</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#sh_purple-diamond</styleUrl>
+			</Pair>
+		</StyleMap>
+		<StyleMap id="msn_purple-pushpin">
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#sn_purple-pushpin</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#sh_purple-pushpin</styleUrl>
+			</Pair>
+		</StyleMap>
+		<StyleMap id="msn_red-circle">
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#sn_red-circle0</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#sh_red-circle0</styleUrl>
+			</Pair>
+		</StyleMap>
+		<StyleMap id="msn_red-circle0">
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#sn_red-circle</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#sh_red-circle</styleUrl>
+			</Pair>
+		</StyleMap>
+		<StyleMap id="msn_red-pushpin">
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#sn_red-pushpin0</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#sh_red-pushpin0</styleUrl>
+			</Pair>
+		</StyleMap>
+		<StyleMap id="msn_red-pushpin0">
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#sn_red-pushpin</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#sh_red-pushpin</styleUrl>
+			</Pair>
+		</StyleMap>
+		<StyleMap id="msn_wht-blank">
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#sn_wht-blank</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#sh_wht-blank</styleUrl>
+			</Pair>
+		</StyleMap>
+		<StyleMap id="msn_wht-pushpin">
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#sn_wht-pushpin</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#sh_wht-pushpin</styleUrl>
+			</Pair>
+		</StyleMap>
+		<StyleMap id="msn_ylw-circle">
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#sn_ylw-circle</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#sh_ylw-circle</styleUrl>
+			</Pair>
+		</StyleMap>
+		<StyleMap id="msn_ylw-diamond">
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#sn_ylw-diamond</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#sh_ylw-diamond</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id="s_ylw-pushpin1">
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+				</Icon>
+				<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+			</IconStyle>
+		</Style>
+		<Style id="s_ylw-pushpin">
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/pushpin/blue-pushpin.png</href>
+				</Icon>
+				<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+			</IconStyle>
+		</Style>
+		<Style id="s_ylw-pushpin0">
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+				</Icon>
+				<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+			</IconStyle>
+		</Style>
+		<Style id="s_ylw-pushpin_hl">
+			<IconStyle>
+				<scale>1.3</scale>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/pushpin/blue-pushpin.png</href>
+				</Icon>
+				<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+			</IconStyle>
+		</Style>
+		<Style id="s_ylw-pushpin_hl1">
+			<IconStyle>
+				<scale>1.3</scale>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+				</Icon>
+				<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+			</IconStyle>
+		</Style>
+		<Style id="s_ylw-pushpin_hl0">
+			<IconStyle>
+				<scale>1.3</scale>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+				</Icon>
+				<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+			</IconStyle>
+		</Style>
+		<Style id="sh_P">
+			<IconStyle>
+				<scale>1.3</scale>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/paddle/P.png</href>
+				</Icon>
+				<hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+			</IconStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+			<ListStyle>
+				<ItemIcon>
+					<href>http://maps.google.com/mapfiles/kml/paddle/P-lv.png</href>
+				</ItemIcon>
+			</ListStyle>
+		</Style>
+		<Style id="sh_S">
+			<IconStyle>
+				<scale>1.3</scale>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/paddle/S.png</href>
+				</Icon>
+				<hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+			</IconStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+			<ListStyle>
+				<ItemIcon>
+					<href>http://maps.google.com/mapfiles/kml/paddle/S-lv.png</href>
+				</ItemIcon>
+			</ListStyle>
+		</Style>
+		<Style id="sh_blu-diamond">
+			<IconStyle>
+				<scale>1.3</scale>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/paddle/blu-diamond.png</href>
+				</Icon>
+				<hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+			</IconStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+			<ListStyle>
+				<ItemIcon>
+					<href>http://maps.google.com/mapfiles/kml/paddle/blu-diamond-lv.png</href>
+				</ItemIcon>
+			</ListStyle>
+		</Style>
+		<Style id="sh_blue-pushpin">
+			<IconStyle>
+				<scale>1.3</scale>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/pushpin/blue-pushpin.png</href>
+				</Icon>
+				<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+			</IconStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+			<ListStyle>
+			</ListStyle>
+		</Style>
+		<Style id="sh_grn-blank">
+			<IconStyle>
+				<scale>1.3</scale>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/paddle/grn-blank.png</href>
+				</Icon>
+				<hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+			</IconStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+			<ListStyle>
+				<ItemIcon>
+					<href>http://maps.google.com/mapfiles/kml/paddle/grn-blank-lv.png</href>
+				</ItemIcon>
+			</ListStyle>
+		</Style>
+		<Style id="sh_grn-pushpin">
+			<IconStyle>
+				<scale>1.3</scale>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/pushpin/grn-pushpin.png</href>
+				</Icon>
+				<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+			</IconStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+			<ListStyle>
+			</ListStyle>
+		</Style>
+		<Style id="sh_grn-pushpin0">
+			<IconStyle>
+				<scale>1.3</scale>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/pushpin/grn-pushpin.png</href>
+				</Icon>
+				<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+			</IconStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+			<ListStyle>
+			</ListStyle>
+		</Style>
+		<Style id="sh_ltblu-blank">
+			<IconStyle>
+				<scale>1.3</scale>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/paddle/ltblu-blank.png</href>
+				</Icon>
+				<hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+			</IconStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+			<ListStyle>
+				<ItemIcon>
+					<href>http://maps.google.com/mapfiles/kml/paddle/ltblu-blank-lv.png</href>
+				</ItemIcon>
+			</ListStyle>
+		</Style>
+		<Style id="sh_ltblu-pushpin">
+			<IconStyle>
+				<scale>1.3</scale>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/pushpin/ltblu-pushpin.png</href>
+				</Icon>
+				<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+			</IconStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+			<ListStyle>
+			</ListStyle>
+		</Style>
+		<Style id="sh_pink-circle">
+			<IconStyle>
+				<scale>1.3</scale>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/paddle/pink-circle.png</href>
+				</Icon>
+				<hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+			</IconStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+			<ListStyle>
+				<ItemIcon>
+					<href>http://maps.google.com/mapfiles/kml/paddle/pink-circle-lv.png</href>
+				</ItemIcon>
+			</ListStyle>
+		</Style>
+		<Style id="sh_pink-pushpin">
+			<IconStyle>
+				<scale>1.3</scale>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/pushpin/pink-pushpin.png</href>
+				</Icon>
+				<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+			</IconStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+			<ListStyle>
+			</ListStyle>
+		</Style>
+		<Style id="sh_pink-pushpin0">
+			<IconStyle>
+				<scale>1.3</scale>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/pushpin/pink-pushpin.png</href>
+				</Icon>
+				<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+			</IconStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+			<ListStyle>
+			</ListStyle>
+		</Style>
+		<Style id="sh_pink-pushpin1">
+			<IconStyle>
+				<scale>1.3</scale>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/pushpin/pink-pushpin.png</href>
+				</Icon>
+				<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+			</IconStyle>
+		</Style>
+		<Style id="sh_purple-diamond">
+			<IconStyle>
+				<scale>1.3</scale>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/paddle/purple-diamond.png</href>
+				</Icon>
+				<hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+			</IconStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+			<ListStyle>
+				<ItemIcon>
+					<href>http://maps.google.com/mapfiles/kml/paddle/purple-diamond-lv.png</href>
+				</ItemIcon>
+			</ListStyle>
+		</Style>
+		<Style id="sh_purple-pushpin">
+			<IconStyle>
+				<scale>1.3</scale>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/pushpin/purple-pushpin.png</href>
+				</Icon>
+				<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+			</IconStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+			<ListStyle>
+			</ListStyle>
+		</Style>
+		<Style id="sh_red-circle0">
+			<IconStyle>
+				<scale>1.3</scale>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/paddle/red-circle.png</href>
+				</Icon>
+				<hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+			</IconStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+			<ListStyle>
+				<ItemIcon>
+					<href>http://maps.google.com/mapfiles/kml/paddle/red-circle-lv.png</href>
+				</ItemIcon>
+			</ListStyle>
+		</Style>
+		<Style id="sh_red-circle">
+			<IconStyle>
+				<scale>1.3</scale>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/paddle/red-circle.png</href>
+				</Icon>
+				<hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+			</IconStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+			<ListStyle>
+				<ItemIcon>
+					<href>http://maps.google.com/mapfiles/kml/paddle/red-circle-lv.png</href>
+				</ItemIcon>
+			</ListStyle>
+		</Style>
+		<Style id="sh_red-pushpin">
+			<IconStyle>
+				<scale>1.3</scale>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/pushpin/red-pushpin.png</href>
+				</Icon>
+				<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+			</IconStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+			<ListStyle>
+			</ListStyle>
+		</Style>
+		<Style id="sh_red-pushpin0">
+			<IconStyle>
+				<scale>1.3</scale>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/pushpin/red-pushpin.png</href>
+				</Icon>
+				<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+			</IconStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+			<ListStyle>
+			</ListStyle>
+		</Style>
+		<Style id="sh_wht-blank">
+			<IconStyle>
+				<scale>1.3</scale>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href>
+				</Icon>
+				<hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+			</IconStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+			<ListStyle>
+				<ItemIcon>
+					<href>http://maps.google.com/mapfiles/kml/paddle/wht-blank-lv.png</href>
+				</ItemIcon>
+			</ListStyle>
+		</Style>
+		<Style id="sh_wht-pushpin">
+			<IconStyle>
+				<scale>1.3</scale>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/pushpin/wht-pushpin.png</href>
+				</Icon>
+				<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+			</IconStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+			<ListStyle>
+			</ListStyle>
+		</Style>
+		<Style id="sh_ylw-circle">
+			<IconStyle>
+				<scale>1.3</scale>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/paddle/ylw-circle.png</href>
+				</Icon>
+				<hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+			</IconStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+			<ListStyle>
+				<ItemIcon>
+					<href>http://maps.google.com/mapfiles/kml/paddle/ylw-circle-lv.png</href>
+				</ItemIcon>
+			</ListStyle>
+		</Style>
+		<Style id="sh_ylw-diamond">
+			<IconStyle>
+				<scale>1.3</scale>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/paddle/ylw-diamond.png</href>
+				</Icon>
+				<hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+			</IconStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+			<ListStyle>
+				<ItemIcon>
+					<href>http://maps.google.com/mapfiles/kml/paddle/ylw-diamond-lv.png</href>
+				</ItemIcon>
+			</ListStyle>
+		</Style>
+		<Style id="sn_P">
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/paddle/P.png</href>
+				</Icon>
+				<hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+			</IconStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+			<ListStyle>
+				<ItemIcon>
+					<href>http://maps.google.com/mapfiles/kml/paddle/P-lv.png</href>
+				</ItemIcon>
+			</ListStyle>
+		</Style>
+		<Style id="sn_S">
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/paddle/S.png</href>
+				</Icon>
+				<hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+			</IconStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+			<ListStyle>
+				<ItemIcon>
+					<href>http://maps.google.com/mapfiles/kml/paddle/S-lv.png</href>
+				</ItemIcon>
+			</ListStyle>
+		</Style>
+		<Style id="sn_blu-diamond">
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/paddle/blu-diamond.png</href>
+				</Icon>
+				<hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+			</IconStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+			<ListStyle>
+				<ItemIcon>
+					<href>http://maps.google.com/mapfiles/kml/paddle/blu-diamond-lv.png</href>
+				</ItemIcon>
+			</ListStyle>
+		</Style>
+		<Style id="sn_blue-pushpin">
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/pushpin/blue-pushpin.png</href>
+				</Icon>
+				<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+			</IconStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+			<ListStyle>
+			</ListStyle>
+		</Style>
+		<Style id="sn_grn-blank">
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/paddle/grn-blank.png</href>
+				</Icon>
+				<hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+			</IconStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+			<ListStyle>
+				<ItemIcon>
+					<href>http://maps.google.com/mapfiles/kml/paddle/grn-blank-lv.png</href>
+				</ItemIcon>
+			</ListStyle>
+		</Style>
+		<Style id="sn_grn-pushpin0">
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/pushpin/grn-pushpin.png</href>
+				</Icon>
+				<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+			</IconStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+			<ListStyle>
+			</ListStyle>
+		</Style>
+		<Style id="sn_grn-pushpin">
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/pushpin/grn-pushpin.png</href>
+				</Icon>
+				<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+			</IconStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+			<ListStyle>
+			</ListStyle>
+		</Style>
+		<Style id="sn_ltblu-blank">
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/paddle/ltblu-blank.png</href>
+				</Icon>
+				<hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+			</IconStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+			<ListStyle>
+				<ItemIcon>
+					<href>http://maps.google.com/mapfiles/kml/paddle/ltblu-blank-lv.png</href>
+				</ItemIcon>
+			</ListStyle>
+		</Style>
+		<Style id="sn_ltblu-pushpin">
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/pushpin/ltblu-pushpin.png</href>
+				</Icon>
+				<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+			</IconStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+			<ListStyle>
+			</ListStyle>
+		</Style>
+		<Style id="sn_noicon">
+			<IconStyle>
+				<Icon>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<color>00ffffff</color>
+			</LabelStyle>
+		</Style>
+		<Style id="sn_pink-circle">
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/paddle/pink-circle.png</href>
+				</Icon>
+				<hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+			</IconStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+			<ListStyle>
+				<ItemIcon>
+					<href>http://maps.google.com/mapfiles/kml/paddle/pink-circle-lv.png</href>
+				</ItemIcon>
+			</ListStyle>
+		</Style>
+		<Style id="sn_pink-pushpin">
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/pushpin/pink-pushpin.png</href>
+				</Icon>
+				<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+			</IconStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+			<ListStyle>
+			</ListStyle>
+		</Style>
+		<Style id="sn_pink-pushpin0">
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/pushpin/pink-pushpin.png</href>
+				</Icon>
+				<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+			</IconStyle>
+		</Style>
+		<Style id="sn_pink-pushpin1">
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/pushpin/pink-pushpin.png</href>
+				</Icon>
+				<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+			</IconStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+			<ListStyle>
+			</ListStyle>
+		</Style>
+		<Style id="sn_purple-diamond">
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/paddle/purple-diamond.png</href>
+				</Icon>
+				<hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+			</IconStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+			<ListStyle>
+				<ItemIcon>
+					<href>http://maps.google.com/mapfiles/kml/paddle/purple-diamond-lv.png</href>
+				</ItemIcon>
+			</ListStyle>
+		</Style>
+		<Style id="sn_purple-pushpin">
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/pushpin/purple-pushpin.png</href>
+				</Icon>
+				<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+			</IconStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+			<ListStyle>
+			</ListStyle>
+		</Style>
+		<Style id="sn_red-circle0">
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/paddle/red-circle.png</href>
+				</Icon>
+				<hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+			</IconStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+			<ListStyle>
+				<ItemIcon>
+					<href>http://maps.google.com/mapfiles/kml/paddle/red-circle-lv.png</href>
+				</ItemIcon>
+			</ListStyle>
+		</Style>
+		<Style id="sn_red-circle">
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/paddle/red-circle.png</href>
+				</Icon>
+				<hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+			</IconStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+			<ListStyle>
+				<ItemIcon>
+					<href>http://maps.google.com/mapfiles/kml/paddle/red-circle-lv.png</href>
+				</ItemIcon>
+			</ListStyle>
+		</Style>
+		<Style id="sn_red-pushpin0">
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/pushpin/red-pushpin.png</href>
+				</Icon>
+				<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+			</IconStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+			<ListStyle>
+			</ListStyle>
+		</Style>
+		<Style id="sn_red-pushpin">
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/pushpin/red-pushpin.png</href>
+				</Icon>
+				<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+			</IconStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+			<ListStyle>
+			</ListStyle>
+		</Style>
+		<Style id="sn_wht-blank">
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href>
+				</Icon>
+				<hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+			</IconStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+			<ListStyle>
+				<ItemIcon>
+					<href>http://maps.google.com/mapfiles/kml/paddle/wht-blank-lv.png</href>
+				</ItemIcon>
+			</ListStyle>
+		</Style>
+		<Style id="sn_wht-pushpin">
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/pushpin/wht-pushpin.png</href>
+				</Icon>
+				<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+			</IconStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+			<ListStyle>
+			</ListStyle>
+		</Style>
+		<Style id="sn_ylw-circle">
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/paddle/ylw-circle.png</href>
+				</Icon>
+				<hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+			</IconStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+			<ListStyle>
+				<ItemIcon>
+					<href>http://maps.google.com/mapfiles/kml/paddle/ylw-circle-lv.png</href>
+				</ItemIcon>
+			</ListStyle>
+		</Style>
+		<Style id="sn_ylw-diamond">
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/paddle/ylw-diamond.png</href>
+				</Icon>
+				<hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+			</IconStyle>
+			<BalloonStyle>
+			</BalloonStyle>
+			<ListStyle>
+				<ItemIcon>
+					<href>http://maps.google.com/mapfiles/kml/paddle/ylw-diamond-lv.png</href>
+				</ItemIcon>
+			</ListStyle>
+		</Style>
+		<description>Place your mouse over the icon to see it display the new icon</description>
+		<Style id="highlightPlacemark">
+			<IconStyle>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/paddle/red-stars.png</href>
+				</Icon>
+			</IconStyle>
+		</Style>
+		<Style id="normalPlacemark">
+			<IconStyle>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href>
+				</Icon>
+			</IconStyle>
+		</Style>
+		<StyleMap id="exampleStyleMap">
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#normalPlacemark</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#highlightPlacemark</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Placemark>
+			<name>Roll over this icon</name>
+			<styleUrl>#exampleStyleMap</styleUrl>
+			<Point>
+				<coordinates>-122.0856545755255,37.42243077405461,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Point1</name>
+			<styleUrl>#exampleStyleMap</styleUrl>
+			<Point>
+				<coordinates>77.38667291923403,28.6292578170251,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>POINT2</name>
+			<styleUrl>#exampleStyleMap</styleUrl>
+			<Point>
+				<coordinates>77.39119982226207,28.62938750545215,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>POINT4</name>
+			<styleUrl>#exampleStyleMap</styleUrl>
+			<Point>
+				<coordinates>77.39303905427384,28.62559492282204,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>POINIT5</name>
+			<styleUrl>#exampleStyleMap</styleUrl>
+			<Point>
+				<coordinates>77.38950269961721,28.62958884551999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>POINT7</name>
+			<styleUrl>#msn_grn-blank</styleUrl>
+			<Point>
+				<coordinates>77.38759537433246,28.62549255635764,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>POINT8</name>
+			<styleUrl>#exampleStyleMap</styleUrl>
+			<Point>
+				<coordinates>77.38646026195731,28.62415193062281,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>POINT9</name>
+			<styleUrl>#exampleStyleMap</styleUrl>
+			<Point>
+				<coordinates>77.39123163003988,28.62550555441612,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>POINT10</name>
+			<styleUrl>#exampleStyleMap</styleUrl>
+			<Point>
+				<coordinates>77.38602552911166,28.62267341989041,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>POINT11</name>
+			<styleUrl>#highlightPlacemark</styleUrl>
+			<Point>
+				<coordinates>77.38034435597227,28.62210043816848,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>POINT11</name>
+			<styleUrl>#highlightPlacemark</styleUrl>
+			<Point>
+				<coordinates>77.39451480323301,28.62958571432751,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>POINT12</name>
+			<styleUrl>#highlightPlacemark</styleUrl>
+			<Point>
+				<coordinates>77.38805567020036,28.62232537500401,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>POINT13</name>
+			<styleUrl>#highlightPlacemark</styleUrl>
+			<Point>
+				<coordinates>77.38795579364957,28.6236087062308,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>POINT14</name>
+			<styleUrl>#highlightPlacemark</styleUrl>
+			<Point>
+				<coordinates>77.37813742757288,28.62258403391766,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>POINT15</name>
+			<styleUrl>#highlightPlacemark</styleUrl>
+			<Point>
+				<coordinates>77.39620787754724,28.62914687293115,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>POINT16</name>
+			<styleUrl>#highlightPlacemark</styleUrl>
+			<Point>
+				<coordinates>77.37864571913309,28.61993026789431,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>POINT17</name>
+			<styleUrl>#highlightPlacemark</styleUrl>
+			<Point>
+				<coordinates>77.2658749311321,25.03904778116267,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>POINT18</name>
+			<styleUrl>#highlightPlacemark</styleUrl>
+			<Point>
+				<coordinates>73.31802450722455,27.42235792262109,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>POINT19</name>
+			<styleUrl>#highlightPlacemark</styleUrl>
+			<Point>
+				<coordinates>70.34057969027704,21.80565386415257,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>POINT20</name>
+			<styleUrl>#highlightPlacemark</styleUrl>
+			<Point>
+				<coordinates>74.93751449531896,20.04537133977266,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>POINT21</name>
+			<styleUrl>#highlightPlacemark</styleUrl>
+			<Point>
+				<coordinates>80.41928588375984,8.542143263867878,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>POINT22</name>
+
+			<styleUrl>#highlightPlacemark</styleUrl>
+			<Point>
+				
+				<coordinates>75.64951923613388,15.17589420435083,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>POINT23</name>
+			<styleUrl>#highlightPlacemark</styleUrl>
+			<Point>
+				
+				<coordinates>101.4220115441367,23.80619247005482,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>POINT24</name>
+			<styleUrl>#highlightPlacemark</styleUrl>
+			<Point>
+				<coordinates>78.29701885447035,18.12073214755792,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>POINT25</name>
+			<styleUrl>#highlightPlacemark</styleUrl>
+			<Point>
+				<coordinates>87.73700223489675,23.19141366484432,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>POINT26</name>
+			<styleUrl>#highlightPlacemark</styleUrl>
+			<Point>
+				<coordinates>76.23220595313174,12.96680353428585,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>POINT27</name>
+			<styleUrl>#highlightPlacemark</styleUrl>
+			<Point>
+				<coordinates>79.25390483258906,15.08366637702365,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>POINT28</name>
+			<styleUrl>#highlightPlacemark</styleUrl>
+			<Point>
+				<coordinates>81.56047209524644,26.59814055663782,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>POINT29</name>
+			<styleUrl>#highlightPlacemark</styleUrl>
+			<Point>
+				<coordinates>81.75046440711479,21.07936537078432,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>POINT30</name>
+			<styleUrl>#highlightPlacemark</styleUrl>
+			<Point>
+				<coordinates>66.10225863324439,27.95469085483562,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>POINT31</name>
+			<styleUrl>#highlightPlacemark</styleUrl>
+			<Point>
+				<coordinates>63.06014921592127,35.94735845165042,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>POINT32</name>
+			<styleUrl>#highlightPlacemark</styleUrl>
+			<Point>
+				<coordinates>57.94024498337896,32.17197127893944,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>POINT33</name>
+			<styleUrl>#highlightPlacemark</styleUrl>>
+			<Point>
+				<coordinates>65.53377783786333,34.00126763846924,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>POINT34</name>
+			<styleUrl>#highlightPlacemark</styleUrl>
+			<Point>
+				<coordinates>52.83147204384048,25.23147131833195,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>POINT35</name>
+			<styleUrl>#highlightPlacemark</styleUrl>
+			<Point>
+				<coordinates>43.7073558790408,28.34713411413407,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>POINT36</name>
+			<styleUrl>#highlightPlacemark</styleUrl>
+			<Point>
+				<coordinates>45.94917725187202,19.12584932526828,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>POINT37</name>
+			<styleUrl>#highlightPlacemark</styleUrl>
+			<Point>
+				<coordinates>54.24831183009492,18.89494661077952,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>POINT38</name>
+			<styleUrl>#highlightPlacemark</styleUrl>
+			<Point>
+				<coordinates>25.99252740002515,20.60512664983852,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>POINT39</name>
+			<styleUrl>#highlightPlacemark</styleUrl>
+			<Point>
+				<coordinates>45.26669821235068,24.76307870551979,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>POINT40</name>
+			<styleUrl>#highlightPlacemark</styleUrl>
+			<Point>
+				<coordinates>22.90360496755178,9.323226718470623,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>POINT41</name>
+			<styleUrl>#highlightPlacemark</styleUrl>
+			<Point>
+				<coordinates>27.61236896424595,16.87493063606517,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>POINT41</name>
+			<styleUrl>#highlightPlacemark</styleUrl>
+			<Point>
+				<coordinates>30.63639133976963,13.63645030080068,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>POINT42</name>
+			<styleUrl>#highlightPlacemark</styleUrl>
+			<Point>
+				<coordinates>22.14906266119643,27.2049789551318,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>POINT43</name>
+			<styleUrl>#highlightPlacemark</styleUrl>
+			<Point>
+				<coordinates>16.96647496994791,4.956146580222513,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>POINT44</name>
+			<styleUrl>#highlightPlacemark</styleUrl>
+			<Point>
+				<coordinates>26.44418632710459,27.19856820139825,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>POINT45</name>
+			<styleUrl>#highlightPlacemark</styleUrl>
+			<Point>
+				<coordinates>29.42890845028608,7.206192612317776,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>POINT46</name>
+			<styleUrl>#highlightPlacemark</styleUrl>
+			<Point>
+				<coordinates>12.75283214116211,19.09525618049597,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>POINT47</name>
+			<styleUrl>#highlightPlacemark</styleUrl>
+			<Point>
+				<coordinates>-3.206826954214246,20.61461180925976,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>POINT48</name>
+			<styleUrl>#highlightPlacemark</styleUrl>
+			<Point>
+				<coordinates>-53.09663172113402,-13.5547241250464,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>POINT49</name>
+			<styleUrl>#highlightPlacemark</styleUrl>
+			<Point>
+				<coordinates>-60.40240770303963,-6.498357199758456,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>POINT50</name>
+			<styleUrl>#highlightPlacemark</styleUrl>
+			<Point>
+				<coordinates>-61.75719027769405,0.356802523039397,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>POINT51</name>
+			<styleUrl>#highlightPlacemark</styleUrl>
+			<Point>
+				<coordinates>-88.1771237230552,51.20787173847881,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>POINT52</name>
+			<styleUrl>#highlightPlacemark</styleUrl>
+			<Point>
+				<coordinates>-103.5662459909111,41.43575902734419,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>POINT53</name>
+			<styleUrl>#highlightPlacemark</styleUrl>
+			<Point>
+				<coordinates>-113.8422116082879,54.93025138603264,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>POINT54</name>
+			<styleUrl>#highlightPlacemark</styleUrl>
+			<Point>
+				<coordinates>-109.2024442820458,47.40056482338217,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Line Measure</name>
+			<styleUrl>#inline3</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					77.38935534644625,28.62664666128664,223.3184285586685 77.38924851818184,28.62516930642814,224.1553756154795
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>Line Measure</name>
+			<styleUrl>#inline7</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					77.3893433200527,28.62665186655487,223.2165872532275 77.38755651230493,28.62673580666609,223.3166805968541
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>Current Position</name>
+			<LookAt>
+				<longitude>77.38864731611139</longitude>
+				<latitude>28.62683426784162</latitude>
+				<altitude>0</altitude>
+				<heading>4.539945747810915</heading>
+				<tilt>0.06411899153538449</tilt>
+				<range>367.3481185989593</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#s_ylw-pushpin1</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>77.38934166666667,28.62661666666667,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>South Point</name>
+			<LookAt>
+				<longitude>77.38993502980425</longitude>
+				<latitude>28.62698238506713</latitude>
+				<altitude>0</altitude>
+				<heading>-0.0003091103609628076</heading>
+				<tilt>0</tilt>
+				<range>794.3943873638416</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_pink-pushpin1</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>77.38925555555556,28.62516944444445,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>East Point</name>
+			<LookAt>
+				<longitude>77.38993502965788</longitude>
+				<latitude>28.62698238489056</latitude>
+				<altitude>0</altitude>
+				<heading>-0.0003091104310868821</heading>
+				<tilt>0</tilt>
+				<range>794.3943876748791</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_pink-pushpin1</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>77.38755555555556,28.62674166666667,0</coordinates>
+			</Point>
+		</Placemark>
+	</Document>
+</kml>
+
