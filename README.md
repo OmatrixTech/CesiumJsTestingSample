@@ -1,6 +1,6 @@
 Implementing CesiumJS in a web application can be a complex task, as it involves 3D rendering and geographic data visualization.This project will solve all of your problems
 
-Watch complete tutorial on it :"**https://youtu.be/jBv4A45V9Uk**"
+Watch complete tutorial on:"**https://youtu.be/jBv4A45V9Uk**"
 
 
 **Please note that if you encounter any reference-related issues in this project, consider installing the NuGet package for 'CefSharp.Wpf'.**
